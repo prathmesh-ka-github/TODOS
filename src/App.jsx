@@ -8,9 +8,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-3xl text-blue-900 font-bold underline">
-        TODOS APP
-      </h1>
       <Nav />
       <Mucho />
     </div>
