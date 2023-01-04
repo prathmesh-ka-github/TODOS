@@ -1,4 +1,5 @@
 import './App.css'
+import './Nav.css'
 import Nav from './Components/Nav'
 import Mucho from './Components/Mucho'
 
