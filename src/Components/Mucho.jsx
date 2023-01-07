@@ -2,10 +2,10 @@ import React from 'react'
 
 const Mucho = () => {
   return (
-    <div>
+    <div className='main-container'>
         <div className='all-lists'>
           <h2>My lists.</h2>
-          <ul className='list-disc list-inside'>
+          <ul>
             <li className='active'>Youtube</li>
             <li>Work</li>
             <li>Grocery</li>
@@ -24,7 +24,7 @@ const Mucho = () => {
             <p className="task-count">3 task remaining</p>
           </div>
           <div className="todo-body">
-
+          {/* -------------------------lists here----------------------- */}
             <div className="tasks">
               <div className="task">
                 <input type="checkbox" name="" id="task1"/>

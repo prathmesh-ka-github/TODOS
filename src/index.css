@@ -1,12 +1,72 @@
+:root{
+    --primary :#0077b6;
+    --secondary:#caf0f8;
+    --main:#7a3af0;
+}
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+}
+.main-container{
+    display: flex;
 }
 .all-lists{
-    margin-top: 20px;
+    cursor: pointer;
+    margin: 6rem;
+}
+.todo-list-container{
+    margin: 6rem;
+}
+.list-title{
+    margin-bottom: 0;
+}
+.delete{
+    all: unset;
+    font-size: 2rem;
+    margin: 10px 10px 0px 0px;
+    background-color: #ccc;
+    padding: 10px;
+}
+.delete:hover{
+    background-color: #bbb9b9;
+}
+.new-list{
+    all: unset;
+    font-size: 2rem;
+    border: none;
+    background-color: #ccc;
+    padding: 10px;
+    margin-left: 5px;
     cursor: pointer;
 }
+.new-list:hover{
+    background-color: #bbb9b9;
+}
+.new-list::placeholder{
+    color: #242424;
+}
+form{
+    display: flex;
+}
+
+.btn-new-list{
+    font-size: 3rem;
+    padding: 0px 10px;
+    background-color: #ccc;
+    border: none;
+}
+.btn-new-list:hover{
+    background-color: #1c1c1c;
+    color: #ccc;
+}
+
+.task-count {
+    margin-top: 0;
+}
 .active {
-    font-weight: bold;
+    font-weight: 900;
+}
+.slashed{
+    text-decoration: line-through;
 }
