@@ -10,7 +10,7 @@ const Mucho = () => {
             <li>Work</li>
             <li>Grocery</li>
           </ul>
-          
+
           <form action="">
             <button className="btn-new-list">+</button>
             <input type="text" className='new-list'
@@ -18,7 +18,7 @@ const Mucho = () => {
           </form>
         </div>
 
-        <div className='todo-list'>
+        <div className='todo-list-container'>
           <div className="todo-header">
             <h2 className="list-title">Youtube</h2>
             <p className="task-count">3 task remaining</p>
