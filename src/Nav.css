@@ -1,0 +1,6 @@
+.nav-container{
+    background-color: var(--primary);
+    padding: 20px;
+    font-size: 48px;
+    font-weight: 900;
+}
