@@ -13,13 +13,18 @@ body {
 }
 .all-lists{
     cursor: pointer;
-    margin: 6rem;
+    margin: 3vmax;
 }
 .todo-list-container{
-    margin: 6rem;
+    margin: 3vmax;
 }
 .list-title{
     margin-bottom: 0;
+}
+.task input{
+    height: 26px;
+    width: 26px;
+    border: none;
 }
 .delete{
     all: unset;
