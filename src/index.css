@@ -32,6 +32,8 @@ body {
     margin: 10px 10px 0px 0px;
     background-color: #ccc;
     padding: 10px;
+    transition: background-color 300ms;
+
 }
 .delete:hover{
     background-color: #bbb9b9;
@@ -44,6 +46,7 @@ body {
     padding: 10px;
     margin-left: 5px;
     cursor: pointer;
+    transition: background-color 300ms;
 }
 .new-list:hover{
     background-color: #bbb9b9;
@@ -53,17 +56,21 @@ body {
 }
 form{
     display: flex;
+    margin-top: 10px;
+
 }
 
 .btn-new-list{
     font-size: 3rem;
     padding: 0px 10px;
-    background-color: #ccc;
+    background-color: #0077b6;
+    color: #ffff;
     border: none;
+    transition: background-color 300ms;
 }
 .btn-new-list:hover{
-    background-color: #1c1c1c;
-    color: #ccc;
+    background-color: #2a2a2a;
+    color: #ffff;
 }
 
 .task-count {
