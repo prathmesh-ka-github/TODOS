@@ -18,6 +18,9 @@ body {
 .todo-list-container{
     margin: 3vmax;
 }
+.todo-body{
+    margin-bottom: 40px;
+}
 .list-title{
     margin-bottom: 0;
 }
@@ -57,7 +60,6 @@ body {
 form{
     display: flex;
     margin-top: 10px;
-
 }
 
 .btn-new-list{
@@ -76,6 +78,10 @@ form{
     background-color: rgb(250, 36, 36);
     color: white;
 }
+.delete-btn:active{
+    background-color: rgb(158, 23, 23);
+    color: white;
+}
 
 .task-count {
     margin-top: 0;
@@ -84,5 +90,11 @@ form{
     font-weight: 900;
 }
 .slashed{
+    text-decoration: line-through;
+}
+
+/* Checkboxx stylz */
+[type="checkbox"]:checked + label {
+    opacity: 0.4;
     text-decoration: line-through;
 }
