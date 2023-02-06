@@ -14,7 +14,7 @@ const Mucho = () => {
           <form action="">
             <button className="btn-new-list">+</button>
             <input type="text" className='new-list'
-            placeholder='New list name'/>
+            placeholder='New list'/>
           </form>
         </div>
 
@@ -54,18 +54,18 @@ const Mucho = () => {
                 </label>
               </div>
             </div>
-
+{/*-------------------- ENTER INPUT FIELD ----------------------*/}
             <div className="new-task-create">
               <form action="">
                 <button className="btn-new-list">+</button>
                 <input type="text" className='new-list' 
-                placeholder='Enter new task' />
+                placeholder='New task' />
               </form>
             </div>
 
             <div className="delete-stuff">
               <button className="btn delete">Clear completed tasks</button>
-              <button className="btn delete">Delete list</button>
+              <button className="btn delete delete-btn">Delete list</button>
             </div>
 
           </div>

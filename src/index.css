@@ -72,6 +72,10 @@ form{
     background-color: #2a2a2a;
     color: #ffff;
 }
+.delete-btn:hover{
+    background-color: rgb(250, 36, 36);
+    color: white;
+}
 
 .task-count {
     margin-top: 0;
