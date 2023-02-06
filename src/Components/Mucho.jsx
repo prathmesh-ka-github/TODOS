@@ -24,11 +24,11 @@ const Mucho = () => {
             <p className="task-count">3 task remaining</p>
           </div>
           <div className="todo-body">
-          {/* -------------------------lists here----------------------- */}
+            {/* -------------------------lists here----------------------- */}
             <div className="tasks">
               <div className="task">
                 <input type="checkbox" name="" id="task1"/>
-                <label for="task1">
+                <label htmlFor="task1">
                   <span className="custom-checkbox"></span>
                   Make a todos app's UI
                 </label>
@@ -38,7 +38,16 @@ const Mucho = () => {
             <div className="tasks">
               <div className="task">
                 <input type="checkbox" name="" id="task2" />
-                <label for="task2">
+                <label htmlFor="task2">
+                  <span className="custom-checkbox"></span>
+                  Review the changes
+                </label>
+              </div>
+            </div>
+            <div className="tasks">
+              <div className="task">
+                <input type="checkbox" name="" id="task2" />
+                <label htmlFor="task2">
                   <span className="custom-checkbox"></span>
                   Push the changes
                 </label>
@@ -48,13 +57,14 @@ const Mucho = () => {
             <div className="tasks">
               <div className="task">
                 <input type="checkbox" name="" id="task3" />
-                <label for="task3">
+                <label htmlFor="task3">
                   <span className="custom-checkbox"></span>
                   Create a pull request
                 </label>
               </div>
             </div>
-{/*-------------------- ENTER INPUT FIELD ----------------------*/}
+          </div>
+            {/*-------------------- ENTER INPUT FIELD ----------------------*/}
             <div className="new-task-create">
               <form action="">
                 <button className="btn-new-list">+</button>
@@ -68,7 +78,6 @@ const Mucho = () => {
               <button className="btn delete delete-btn">Delete list</button>
             </div>
 
-          </div>
         </div>
     </div>
   )
