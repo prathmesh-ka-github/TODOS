@@ -5,10 +5,10 @@ const Mucho = () => {
     <div className='main-container'>
         <div className='all-lists'>
           <h2>My lists.</h2>
-          <ul>
-            <li className='active'>Youtube</li>
-            <li>Work</li>
-            <li>Grocery</li>
+          <ul id='todo-container' className='task-list'>
+            <li className='list-name active'>Projects</li>
+            <li className='list-name'>College</li>
+            <li className='list-name'>Grocery</li>
           </ul>
 
           <form action="">
