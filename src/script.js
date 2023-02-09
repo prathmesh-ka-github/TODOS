@@ -2,6 +2,7 @@ const listContainer = document.getElementById('todo-containers')
 
 let list = ['Gym','Todo']
 
+// to render the given list.
 function render(){
     clearElement(listContainer)
     console.log("render function working!")
