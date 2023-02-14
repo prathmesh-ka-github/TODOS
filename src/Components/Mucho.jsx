@@ -27,8 +27,8 @@ const Mucho = () => {
             {/* -------------------------lists here----------------------- */}
             <div className="tasks">
               <div className="task">
-                <input type="checkbox" name="" id="task1"/>
-                <label htmlFor="task1">
+                <input type="checkbox"/>
+                <label>
                   <span className="custom-checkbox"></span>
                   Make a todos app's UI
                 </label>
@@ -37,8 +37,8 @@ const Mucho = () => {
 
             <div className="tasks">
               <div className="task">
-                <input type="checkbox" name="" id="task2" />
-                <label htmlFor="task2">
+                <input type="checkbox"/>
+                <label>
                   <span className="custom-checkbox"></span>
                   Review the changes
                 </label>
@@ -46,8 +46,8 @@ const Mucho = () => {
             </div>
             <div className="tasks">
               <div className="task">
-                <input type="checkbox" name="" id="task2" />
-                <label htmlFor="task2">
+                <input type="checkbox"/>
+                <label>
                   <span className="custom-checkbox"></span>
                   Push the changes
                 </label>
@@ -56,8 +56,8 @@ const Mucho = () => {
 
             <div className="tasks">
               <div className="task">
-                <input type="checkbox" name="" id="task3" />
-                <label htmlFor="task3">
+                <input type="checkbox"/>
+                <label>
                   <span className="custom-checkbox"></span>
                   Create a pull request
                 </label>
