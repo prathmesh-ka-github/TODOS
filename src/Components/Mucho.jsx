@@ -1,84 +1,74 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Mucho = () => {
+
+  const [inputList, setInputList] = useState("buy apple");
+  const [Items,setItems] = useState([]);
+
+  const itemEvent = (event) => {
+    setInputList(event.target.value);
+  };
+  const listOfItems = () => {
+    setItems((oldItems) => {
+      return [...oldItems, inputList];
+    });
+  };
+
+
+
+
   return (
     <div className='main-container'>
-        <div className='all-lists'>
-          <h2>My lists.</h2>
-          <ul id='todo-container' className='task-list'>
-            <li className='list-name active'>Projects</li>
-            <li className='list-name'>College</li>
-            <li className='list-name'>Grocery</li>
-          </ul>
+      <div className='all-lists'>
+        <h2>My lists.</h2>
+        <ul id='todo-container' className='task-list'>
+          <li className='list-name active'>Projects</li>
+          <li className='list-name'>College</li>
+          <li className='list-name'>Grocery</li>
+        </ul>
 
-          <form action="">
-            <button className="btn-new-list">+</button>
-            <input type="text" className='new-list'
-            placeholder='New list'/>
-          </form>
+        <form action="">
+          <button className="btn-new-list">+</button>
+          <input type="text" className='new-list' placeholder='New list' />
+        </form>
+      </div>
+
+      <div className='todo-list-container'>
+        <div className="todo-header">
+          <h2 className="list-title">Youtube</h2>
+          <p className="task-count">3 task remaining</p>
+        </div>
+        {/*-------------------- ENTER INPUT FIELD ----------------------*/}
+        <div className="new-task-create">
+            <button className="btn-new-list" onClick={listOfItems}>+</button>
+            <input type="text" className='new-list' onChange={itemEvent} 
+              placeholder='New task' />
         </div>
 
-        <div className='todo-list-container'>
-          <div className="todo-header">
-            <h2 className="list-title">Youtube</h2>
-            <p className="task-count">3 task remaining</p>
+
+        {/* -------------------------lists here----------------------- */}
+        <div className="todo-body">
+          <div className="tasks">
+          {
+            Items.map((itemval) => {
+              return <>
+                <div className="task">
+                  <input type="checkbox" />
+                  <label>
+                    <span className="custom-checkbox"></span>
+                    {itemval}
+                  </label>
+                </div>
+              </>
+            })
+            }
           </div>
-          <div className="todo-body">
-            {/* -------------------------lists here----------------------- */}
-            <div className="tasks">
-              <div className="task">
-                <input type="checkbox" name="" id="task1"/>
-                <label htmlFor="task1">
-                  <span className="custom-checkbox"></span>
-                  Make a todos app's UI
-                </label>
-              </div>
-            </div>
-
-            <div className="tasks">
-              <div className="task">
-                <input type="checkbox" name="" id="task2" />
-                <label htmlFor="task2">
-                  <span className="custom-checkbox"></span>
-                  Review the changes
-                </label>
-              </div>
-            </div>
-            <div className="tasks">
-              <div className="task">
-                <input type="checkbox" name="" id="task2" />
-                <label htmlFor="task2">
-                  <span className="custom-checkbox"></span>
-                  Push the changes
-                </label>
-              </div>
-            </div>
-
-            <div className="tasks">
-              <div className="task">
-                <input type="checkbox" name="" id="task3" />
-                <label htmlFor="task3">
-                  <span className="custom-checkbox"></span>
-                  Create a pull request
-                </label>
-              </div>
-            </div>
-          </div>
-            {/*-------------------- ENTER INPUT FIELD ----------------------*/}
-            <div className="new-task-create">
-              <form action="">
-                <button className="btn-new-list">+</button>
-                <input type="text" className='new-list' 
-                placeholder='New task' />
-              </form>
-            </div>
-
-            <div className="delete-stuff">
-              <button className="btn delete">Clear completed tasks</button>
-              <button className="btn delete delete-btn">Delete list</button>
-            </div>
-
         </div>
+        <div className="delete-stuff">
+          <button className="btn delete">Clear completed tasks</button>
+          <button className="btn delete delete-btn">Delete list</button>
+        </div>
+      </div>
     </div>
   )
 }
