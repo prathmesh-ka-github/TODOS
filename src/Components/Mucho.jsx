@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Mucho = () => {
 
-  const [inputList, setInputList] = useState("buy apple");
+  const [inputList, setInputList] = useState("");
   const [Items,setItems] = useState([]);
 
   const itemEvent = (event) => {
@@ -12,6 +12,7 @@ const Mucho = () => {
     setItems((oldItems) => {
       return [...oldItems, inputList];
     });
+    setInputList('');
   };
 
 
@@ -42,7 +43,7 @@ const Mucho = () => {
         <div className="new-task-create">
             <button className="btn-new-list" onClick={listOfItems}>+</button>
             <input type="text" className='new-list' onChange={itemEvent} 
-              placeholder='New task' />
+              value={inputList} placeholder='New task' />
         </div>
 
 
