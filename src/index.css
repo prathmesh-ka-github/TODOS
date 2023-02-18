@@ -56,7 +56,7 @@ body {
 .new-list::placeholder{
     color: #242424;
 }
-form{
+.new-task-create{
     display: flex;
     margin-top: 10px;
 }
