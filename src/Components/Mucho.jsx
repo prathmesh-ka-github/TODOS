@@ -14,10 +14,6 @@ const Mucho = () => {
     });
     setInputList('');
   };
-
-
-
-
   return (
     <div className='main-container'>
       <div className='all-lists'>
