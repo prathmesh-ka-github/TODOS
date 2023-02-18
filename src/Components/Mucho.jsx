@@ -2,10 +2,21 @@ import React, { useState } from 'react'
 
 const Mucho = () => {
 
-  const [inputList, setInputList] = useState("");
-  const item = () => {
+  const [inputList, setInputList] = useState("buy apple");
+  const [Items,setItems] = useState([]);
 
+  const itemEvent = (event) => {
+    setInputList(event.target.value);
   };
+  const listOfItems = () => {
+    setItems((oldItems) => {
+      return [...oldItems, inputList];
+    });
+  };
+
+
+
+
   return (
     <div className='main-container'>
       <div className='all-lists'>
@@ -18,7 +29,7 @@ const Mucho = () => {
 
         <form action="">
           <button className="btn-new-list">+</button>
-          <input type="text" className='new-list' onChange={item} placeholder='New list' />
+          <input type="text" className='new-list' placeholder='New list' />
         </form>
       </div>
 
@@ -29,53 +40,28 @@ const Mucho = () => {
         </div>
         {/*-------------------- ENTER INPUT FIELD ----------------------*/}
         <div className="new-task-create">
-          <form action="">
-            <button className="btn-new-list">+</button>
-            <input type="text" className='new-list'
+            <button className="btn-new-list" onClick={listOfItems}>+</button>
+            <input type="text" className='new-list' onChange={itemEvent} 
               placeholder='New task' />
-          </form>
         </div>
 
 
         {/* -------------------------lists here----------------------- */}
         <div className="todo-body">
           <div className="tasks">
-            <div className="task">
-              <input type="checkbox" />
-              <label>
-                <span className="custom-checkbox"></span>
-                Make a todos app's UI
-              </label>
-            </div>
-          </div>
-
-          <div className="tasks">
-            <div className="task">
-              <input type="checkbox" />
-              <label>
-                <span className="custom-checkbox"></span>
-                Review the changes
-              </label>
-            </div>
-          </div>
-          <div className="tasks">
-            <div className="task">
-              <input type="checkbox" />
-              <label>
-                <span className="custom-checkbox"></span>
-                Push the changes
-              </label>
-            </div>
-          </div>
-
-          <div className="tasks">
-            <div className="task">
-              <input type="checkbox" />
-              <label>
-                <span className="custom-checkbox"></span>
-                Create a pull request
-              </label>
-            </div>
+          {
+            Items.map((itemval) => {
+              return <>
+                <div className="task">
+                  <input type="checkbox" />
+                  <label>
+                    <span className="custom-checkbox"></span>
+                    {itemval}
+                  </label>
+                </div>
+              </>
+            })
+            }
           </div>
         </div>
         <div className="delete-stuff">
