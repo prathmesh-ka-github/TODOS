@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Mucho = () => {
-
+// JS
   const [inputList, setInputList] = useState("");
   const [Items,setItems] = useState([]);
 
@@ -14,6 +14,7 @@ const Mucho = () => {
     });
     setInputList('');
   };
+// HTML output 
   return (
     <div className='main-container'>
       <div className='all-lists'>
